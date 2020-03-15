@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styles from './HomePage.module.css';
 import UsersPool from '../users/userPool';
+import Login from './Login';
 
 const validatePassword = (password, confirmPassword) => {
     if (password !== confirmPassword) {
@@ -92,6 +93,8 @@ export default () => {
                 <button type="submit">Submit</button>
             </form>}
             {error && <p className={styles.errorMessage}>Error: {translateErrorCode(errorCode)}</p>}
-        </div>
+        </div> <br/> <br/>
+
+        <Login />
     </div>;
 }
